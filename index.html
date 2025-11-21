@@ -13,11 +13,19 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
             color: #333;
             line-height: 1.8;
             padding: 20px;
             min-height: 100vh;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
@@ -38,10 +46,14 @@
         }
 
         .header h1 {
-            font-size: 2em;
-            color: #667eea;
+            font-size: 2.2em;
+            background: linear-gradient(45deg, #e73c7e, #23a6d5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
             animation: fadeIn 1s ease-in;
+            font-weight: 800;
         }
 
         .emoji {
@@ -53,20 +65,30 @@
 
         .section {
             margin: 25px 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            border-left: none;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transform: translateY(0);
+            transition: all 0.3s ease;
             animation: slideIn 0.8s ease-out;
         }
 
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
         .section h2 {
-            color: #764ba2;
-            font-size: 1.5em;
+            color: #e73c7e;
+            font-size: 1.6em;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 700;
         }
 
         .section p {
@@ -95,12 +117,18 @@
         }
 
         .promise-box {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-            padding: 20px;
-            border-radius: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px;
+            border-radius: 20px;
             text-align: center;
-            margin: 25px 0;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            margin: 30px 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .promise-box:hover {
+            transform: scale(1.02);
         }
 
         .promise-box p {
@@ -111,12 +139,14 @@
 
         .footer {
             text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #667eea;
-            font-size: 1.2em;
-            color: #667eea;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            font-size: 1.3em;
+            color: #e73c7e;
             font-weight: bold;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
         .music-note {
@@ -164,30 +194,9 @@
             25% { transform: scale(1.2); }
         }
 
-        .thank-you-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 25px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 1s ease-out;
-        }
 
-        .thank-you-box h2 {
-            color: #fff;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
 
-        .thank-you-box p {
-            color: #fff;
-            font-size: 1.1em;
-            line-height: 1.8;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
+
 
         @keyframes fadeInUp {
             from { 
@@ -246,60 +255,44 @@
         </div>
 
         <div class="section">
-            <p><strong>I was so sad to hear your news</strong>, but I took some time to really reflect and put together my most sincere and heartfelt words for you. Please read this when you are alone.</p>
-            <p><strong>You should never apologize</strong> for what you went through. I completely understand and empathize with everything. <span class="highlight">Your health and spirit are the most important things right now!</span> 💪</p>
+            <p>Hey man, I was really sad when I heard your news. I've been thinking about this a lot and wanted to share some honest words with you. Please take your time reading this when you're alone.</p>
+            <p>Listen, you don't need to apologize for anything. I get it, I really do. Life throws these curveballs at us sometimes. <span class="highlight">Right now, the most important thing is YOU - your health, your peace of mind.</span> 💪</p>
         </div>
 
         <div class="section floating">
-            <h2><span class="sparkle">🙏</span> Thank You, My Mentor</h2>
-            <p>I am truly so grateful for everything you taught me:</p>
+            <h2><span class="sparkle">🙏</span> Thank You, Brother</h2>
+            <p>Man, I can't thank you enough for everything you've taught me. Seriously:</p>
             <ul>
-                <li>The professional work ethic and how to handle people at the center 🏢</li>
-                <li>All the valuable life lessons you shared</li>
+                <li>You showed me what real professionalism looks like at work 🏢</li>
+                <li>The way you handle people and situations - that's something I'll carry with me forever</li>
+                <li>All those life lessons we talked about over coffee</li>
             </ul>
-            <p style="margin-top: 15px;"><strong>You are a brother and a mentor that I will always respect and cherish.</strong> I will keep all those great memories we made in Dalat! ✨</p>
+            <p style="margin-top: 15px;">You're not just a mentor to me - you're a brother. I'll never forget our time together in Dalat. Those memories are pure gold. ✨</p>
         </div>
 
         <div class="section floating">
-            <h2><span class="sparkle">🛡️</span> Focus on Yourself Now</h2>
-            <p>Please rest, recharge, and take excellent care of yourself when you get back to Belgium. I truly hope you find peace and overcome this difficult period, especially with your family.</p>
-            <p style="text-align: center; font-size: 1.2em; margin-top: 15px;"><strong>Always remember: You are not alone! <span class="heart">❤️</span></strong></p>
+            <h2><span class="sparkle">🛡️</span> Take Care of You</h2>
+            <p>When you get back to Belgium, please just rest up and recharge, okay? Take all the time you need. I really hope you find some peace during this rough patch, especially with your family by your side.</p>
+            <p style="text-align: center; font-size: 1.2em; margin-top: 15px;"><strong>Remember this: You're never alone, bro. <span class="heart">❤️</span></strong></p>
         </div>
 
         <div class="promise-box">
-            <h2 style="color: #1a202c; margin-bottom: 15px;">✈️ Our Promise: I Will See You Again</h2>
-            <p>I promise we will definitely keep in touch—on Messenger, for sure.</p>
-            <p style="margin-top: 10px;">I will work hard and strive for success so that one day, I can travel to visit your country 🇧🇪. When that day comes, we absolutely must meet again!</p>
+            <h2 style="color: #1a202c; margin-bottom: 15px;">✈️ This Isn't Goodbye</h2>
+            <p>We're staying in touch - that's a promise. I'll be hitting you up on Messenger for sure.</p>
+            <p style="margin-top: 10px;">I'm gonna work my ass off and make something of myself. One day, I'm coming to Belgium 🇧🇪 to visit you. And when that day comes, we're grabbing beers and catching up properly!</p>
         </div>
 
         <div class="section">
             <p style="text-align: center; font-size: 1.15em;">
-                <strong>Wishing you and your family a warm Christmas 🎄, and all the best for a brilliant, peaceful future!</strong>
-            </p>
-        </div>
-
-        <div class="thank-you-box floating">
-            <h2><span class="sparkle">✨</span> Cảm Ơn Anh! <span class="sparkle">✨</span></h2>
-            <p style="margin-bottom: 15px;">
-                <strong>Cảm ơn anh vì đã luôn là một người anh, một người thầy tuyệt vời trong suốt thời gian qua.</strong>
-            </p>
-            <p>
-                Những bài học, những kỷ niệm đẹp mà anh mang lại sẽ mãi là hành trang quý giá nhất của em. 
-                Em sẽ không bao giờ quên sự tận tâm, lòng nhiệt huyết và tình cảm của anh dành cho em.
-            </p>
-            <p style="margin-top: 15px; font-size: 1.2em;">
-                <strong>Anh là người đặc biệt nhất! 🌟</strong>
-            </p>
-            <p style="margin-top: 10px;">
-                Dù khoảng cách có xa đến đâu, tình anh em của chúng ta sẽ luôn trong lòng em. 
-                Hãy giữ gìn sức khỏe thật tốt và luôn mạnh mẽ nhé anh! 💪
+                <strong>Wishing you and your family a beautiful Christmas 🎄 and all the happiness in the world for what's coming next!</strong>
             </p>
         </div>
 
         <div class="footer">
-            <p>Take care, my dear brother!</p>
-            <p>See you again! 👋</p>
+            <p>Take care of yourself, brother! 💙</p>
+            <p style="margin-top: 10px;">Until we meet again... 👋</p>
             <span class="emoji">🤗</span>
+            <p style="font-size: 0.9em; margin-top: 15px; color: #666;">With love and respect always</p>
         </div>
     </div>
 
@@ -307,9 +300,9 @@
         🎵
     </div>
 
-    <!-- Background Music - Sad Emotional Piano -->
-    <audio id="bgMusic" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+    <!-- Background Music - Hey Jude -->
+    <audio id="bgMusic" loop autoplay>
+        <source src="hey-jude.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -317,14 +310,22 @@
         const musicToggle = document.getElementById('musicToggle');
         let isPlaying = false;
 
-        // Auto-play on user interaction
-        document.addEventListener('click', function() {
-            if (!isPlaying) {
-                music.play().catch(e => console.log('Autoplay prevented'));
+        // Auto-play immediately
+        window.addEventListener('load', function() {
+            music.play().then(() => {
                 isPlaying = true;
                 musicToggle.textContent = '🔊';
-            }
-        }, { once: true });
+            }).catch(e => {
+                // If autoplay blocked, play on first interaction
+                document.addEventListener('click', function() {
+                    if (!isPlaying) {
+                        music.play();
+                        isPlaying = true;
+                        musicToggle.textContent = '🔊';
+                    }
+                }, { once: true });
+            });
+        });
 
         musicToggle.addEventListener('click', function(e) {
             e.stopPropagation();
