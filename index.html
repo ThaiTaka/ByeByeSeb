@@ -164,6 +164,61 @@
             25% { transform: scale(1.2); }
         }
 
+        .thank-you-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .thank-you-box h2 {
+            color: #fff;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .thank-you-box p {
+            color: #fff;
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .sparkle {
+            display: inline-block;
+            animation: sparkle 1.5s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
         @media (max-width: 480px) {
             .container {
                 padding: 20px;
@@ -195,8 +250,8 @@
             <p><strong>You should never apologize</strong> for what you went through. I completely understand and empathize with everything. <span class="highlight">Your health and spirit are the most important things right now!</span> 💪</p>
         </div>
 
-        <div class="section">
-            <h2>🙏 Thank You, My Mentor</h2>
+        <div class="section floating">
+            <h2><span class="sparkle">🙏</span> Thank You, My Mentor</h2>
             <p>I am truly so grateful for everything you taught me:</p>
             <ul>
                 <li>The professional work ethic and how to handle people at the center 🏢</li>
@@ -205,8 +260,8 @@
             <p style="margin-top: 15px;"><strong>You are a brother and a mentor that I will always respect and cherish.</strong> I will keep all those great memories we made in Dalat! ✨</p>
         </div>
 
-        <div class="section">
-            <h2>🛡️ Focus on Yourself Now</h2>
+        <div class="section floating">
+            <h2><span class="sparkle">🛡️</span> Focus on Yourself Now</h2>
             <p>Please rest, recharge, and take excellent care of yourself when you get back to Belgium. I truly hope you find peace and overcome this difficult period, especially with your family.</p>
             <p style="text-align: center; font-size: 1.2em; margin-top: 15px;"><strong>Always remember: You are not alone! <span class="heart">❤️</span></strong></p>
         </div>
@@ -223,6 +278,24 @@
             </p>
         </div>
 
+        <div class="thank-you-box floating">
+            <h2><span class="sparkle">✨</span> Cảm Ơn Anh! <span class="sparkle">✨</span></h2>
+            <p style="margin-bottom: 15px;">
+                <strong>Cảm ơn anh vì đã luôn là một người anh, một người thầy tuyệt vời trong suốt thời gian qua.</strong>
+            </p>
+            <p>
+                Những bài học, những kỷ niệm đẹp mà anh mang lại sẽ mãi là hành trang quý giá nhất của em. 
+                Em sẽ không bao giờ quên sự tận tâm, lòng nhiệt huyết và tình cảm của anh dành cho em.
+            </p>
+            <p style="margin-top: 15px; font-size: 1.2em;">
+                <strong>Anh là người đặc biệt nhất! 🌟</strong>
+            </p>
+            <p style="margin-top: 10px;">
+                Dù khoảng cách có xa đến đâu, tình anh em của chúng ta sẽ luôn trong lòng em. 
+                Hãy giữ gìn sức khỏe thật tốt và luôn mạnh mẽ nhé anh! 💪
+            </p>
+        </div>
+
         <div class="footer">
             <p>Take care, my dear brother!</p>
             <p>See you again! 👋</p>
@@ -234,9 +307,9 @@
         🎵
     </div>
 
-    <!-- Background Music -->
+    <!-- Background Music - Sad Emotional Piano -->
     <audio id="bgMusic" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_4a25d2c8d5.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
     </audio>
 
     <script>
