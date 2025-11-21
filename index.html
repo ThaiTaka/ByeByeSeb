@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message For You 💔</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .emoji {
+            font-size: 2.5em;
+            display: block;
+            margin: 15px 0;
+            animation: bounce 2s infinite;
+        }
+
+        .section {
+            margin: 25px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        .section h2 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section p {
+            color: #2d3748;
+            font-size: 1.05em;
+            margin-bottom: 12px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .section li {
+            margin: 8px 0;
+            color: #4a5568;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffd89b 0%, #19547b 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .promise-box {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 25px 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .promise-box p {
+            color: #1a202c;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #667eea;
+            font-size: 1.2em;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .music-note {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(102, 126, 234, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .heart {
+            color: #e53e3e;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .section h2 {
+                font-size: 1.2em;
+            }
+            
+            .section p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hey Bro! <span class="heart">💔</span></h1>
+            <p style="color: #4a5568; font-size: 1.1em;">A heartfelt message for you...</p>
+        </div>
+
+        <div class="section">
+            <p><strong>I was so sad to hear your news</strong>, but I took some time to really reflect and put together my most sincere and heartfelt words for you. Please read this when you are alone.</p>
+            <p><strong>You should never apologize</strong> for what you went through. I completely understand and empathize with everything. <span class="highlight">Your health and spirit are the most important things right now!</span> 💪</p>
+        </div>
+
+        <div class="section">
+            <h2>🙏 Thank You, My Mentor</h2>
+            <p>I am truly so grateful for everything you taught me:</p>
+            <ul>
+                <li>The professional work ethic and how to handle people at the center 🏢</li>
+                <li>All the valuable life lessons you shared</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>You are a brother and a mentor that I will always respect and cherish.</strong> I will keep all those great memories we made in Dalat! ✨</p>
+        </div>
+
+        <div class="section">
+            <h2>🛡️ Focus on Yourself Now</h2>
+            <p>Please rest, recharge, and take excellent care of yourself when you get back to Belgium. I truly hope you find peace and overcome this difficult period, especially with your family.</p>
+            <p style="text-align: center; font-size: 1.2em; margin-top: 15px;"><strong>Always remember: You are not alone! <span class="heart">❤️</span></strong></p>
+        </div>
+
+        <div class="promise-box">
+            <h2 style="color: #1a202c; margin-bottom: 15px;">✈️ Our Promise: I Will See You Again</h2>
+            <p>I promise we will definitely keep in touch—on Messenger, for sure.</p>
+            <p style="margin-top: 10px;">I will work hard and strive for success so that one day, I can travel to visit your country 🇧🇪. When that day comes, we absolutely must meet again!</p>
+        </div>
+
+        <div class="section">
+            <p style="text-align: center; font-size: 1.15em;">
+                <strong>Wishing you and your family a warm Christmas 🎄, and all the best for a brilliant, peaceful future!</strong>
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Take care, my dear brother!</p>
+            <p>See you again! 👋</p>
+            <span class="emoji">🤗</span>
+        </div>
+    </div>
+
+    <div class="music-note" id="musicToggle" title="Toggle Music">
+        🎵
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_4a25d2c8d5.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const music = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        let isPlaying = false;
+
+        // Auto-play on user interaction
+        document.addEventListener('click', function() {
+            if (!isPlaying) {
+                music.play().catch(e => console.log('Autoplay prevented'));
+                isPlaying = true;
+                musicToggle.textContent = '🔊';
+            }
+        }, { once: true });
+
+        musicToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isPlaying) {
+                music.pause();
+                musicToggle.textContent = '🔇';
+                isPlaying = false;
+            } else {
+                music.play();
+                musicToggle.textContent = '🔊';
+                isPlaying = true;
+            }
+        });
+    </script>
+</body>
+</html>
